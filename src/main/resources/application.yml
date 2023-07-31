@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        generate_statistics: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/public
+    username: postgres
+    password: postgres
+
+feign:
+  urls:
+    consumer: http://localhost:8081
+
